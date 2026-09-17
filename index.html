@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Notulen Rapat SPMI</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- React & ReactDOM -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <!-- Babel (Penting untuk membaca file .jsx Anda) -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        /* CSS Khusus Mode Cetak */
+        @media print {
+            body { background: white; margin: 0; padding: 0; }
+            #root > div > header, 
+            #root > div > main > div:nth-child(2),
+            button, .bg-slate-100 { display: none !important; }
+            #root > div { background: white; padding: 0 !important; }
+            #root > div.min-h-screen { display: none; }
+            .break-before-page { page-break-before: always; }
+            @page { size: A4; margin: 2cm; }
+        }
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <!-- Baris ini yang akan memanggil file app.jsx Anda! -->
+    <script type="text/babel" src="app.jsx"></script>
+</body>
+</html>
